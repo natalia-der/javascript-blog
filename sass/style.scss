@@ -94,6 +94,27 @@ body {
   }
 }
 
+/* Tags list */
+
+.tags {
+  li {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+.tag-size-1 {
+  font-size: 100%;
+}
+.tag-size-2 {
+  font-size: 150%;
+}
+.tag-size-3 {
+  font-size: 200%;
+}
+.tag-size-7 {
+  font-size: 250%;
+}
+
 /* Authors */
 
 .authors {

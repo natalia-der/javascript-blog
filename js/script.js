@@ -95,9 +95,7 @@
 
       /* find the title element */
 
-      const articleTitle = article.querySelector(
-        opts.articleSelector
-      ).innerHTML;
+      const articleTitle = article.querySelector(opts.titleSelector).innerHTML;
       console.log(articleTitle);
 
       /* create HTML of the link */
@@ -140,7 +138,8 @@
 
   function calculateTagClass(count, params) {
     classNumber = Math.floor(
-      ((count - params.min) / (params.max - params.min)) * optCloudClassCount +
+      ((count - params.min) / (params.max - params.min)) *
+        opts.cloudClassCount +
         1
     );
     return opts.cloudClassPrefix + classNumber;
@@ -311,7 +310,7 @@
   }
   function addClickListenersToTags() {
     /* find all links to tags */
-    const tags = document.querySelectorAll('.post-tags a');
+    const tags = document.querySelectorAll('.post-tags a, .list.tags a');
 
     /* START LOOP: for each link */
 
@@ -465,7 +464,9 @@
 
   function addClickListenersToAuthors() {
     /* find all links to authors */
-    const authors = document.querySelectorAll('.post-author a');
+    const authors = document.querySelectorAll(
+      '.post-author a, .list.authors a'
+    );
     // console.log(authors);
 
     /* START LOOP: for each link */
